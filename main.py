@@ -1,11 +1,23 @@
-#1. Create a greeting for your program.
-print("Welcome to the Band Name Generator!\n")
+# greet the user
+print("Welcome to the Tip Calculator")
 
-#2. Ask the user for the city that they grew up in.
-city = input("What city did you grow up in?\n")
+# generate user input for the total bill amount, tip %, and number of people spliting the bill
+total = input("What was the total bill? $")
+tip_amt = input("What percentage tip would you like to give? 10, 12, or 15? ")
+num_ppl = input("How many people to split the bill? ")
 
-#3. Ask the user for the name of a pet.
-pet = input("What is the name of your pet?\n")
+# convert each inputed value into the correct data type
+total_float = float(total)
+tip_amt_int = int(tip_amt)
+num_ppl_int = int(num_ppl)
 
-#4. Combine the name of their city and pet and show them their band name.
-print("\nYour band name could be " + city + " " + pet + "!")
+# calculate and add tip to the total amt
+tip = total_float * (tip_amt_int / 100)
+total_with_tip = total_float + tip
+
+# split the total bill between the number of people and format the amt to two decimal places
+split_amt = total_with_tip / num_ppl_int
+split_formated = "{: .2f}".format(split_amt)
+
+# print result
+print(f"Each person should pay: ${split_formated}")
