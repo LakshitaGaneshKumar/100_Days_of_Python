@@ -1,0 +1,16 @@
+classes:
+    gamescreen
+    scoreboard
+    ball
+    paddle
+
+steps:
+    create screen with two sides for each player
+    create two paddles on each edge of the screen for two players
+        up/down functionality for one of the paddles that the user can operate
+    create a ball that will move across the screen
+    detect when the ball collides with the wall
+    detect when the ball collids with a paddle
+        increase the score by one
+        refresh the scoreboard
+        bounce the ball back
